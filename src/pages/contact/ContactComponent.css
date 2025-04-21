@@ -113,6 +113,12 @@
   display: flex;
   justify-content: center;
 }
+.book-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
 
 .blogsite-btn-div {
   width: 100%;
