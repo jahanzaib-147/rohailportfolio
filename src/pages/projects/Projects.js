@@ -15,122 +15,252 @@ import project5Video from "../../assets/videos/sql.mp4";
 import project7video from "../../assets/videos/project8.mp4";
 import project8video from "../../assets/videos/maven.mp4";
 import project9video from "../../assets/videos/adventurebike.mp4";
+import project10video from "../../assets/videos/dealcart.mp4"; // Example for case study video
 
 const projectsData = [
   {
     id: 1,
-    title: "Bikers Data Project Performance Dashboard",
+    title: "Branch & SKU-Level Sales, Inventory & Order Insights",
     description:
-      "This project delivers a dynamic and interactive dashboard built on SQL-driven insights and Excel data to analyze QA efficiency, project timelines, and sprint progress. It identifies key metrics such as missed bugs, sprint completion rates, and test coverage, enabling data analysts and project managers to monitor quality assurance activities and optimize development workflows across active projects.",
-    videoSrc: project1Video,
+      "This SQL project includes 5 advanced queries for retail operations. It covers Karachi branch inventory valuation using latest TP, monthly GMV calculation by branch using MRP, POS-level inventory valuation with max MRP, daily receiving summary for selected branches, and detailed IB2C order reports. Together, they help track stock value, sales, receiving, and B2C performance.",
+    videoSrc: project5Video,
+    fileSrc: "/pdf/branch-sku-sales.pdf", // public folder path
+    fileExtension: "pdf",
     button: {
       text: "View Full Doc",
-      link:
-        "https://docs.google.com/spreadsheets/d/1bB6OvGoZ5a4280jzKnGPqzgvTUjcfAY-CqkjEl2W87o/edit?usp=sharing",
+      link: "", // not needed for local download
     },
   },
   {
     id: 2,
-    title: "Coffee Shop Sales Project: Data Analysis & Insights",
+    title:
+      "QA & Sprint Insights Dashboard – Project Health and Testing Analysis",
     description:
-      "The Coffee Shop Sales analysis reveals that coffee is the top-selling category, followed by tea and drinking chocolate. Peak sales occur from 7 AM to 10 AM, driven by caffeine demand, with Lower Manhattan as the highest-performing location. Seasonal fluctuations indicate opportunities for targeted promotions during slower months. These insights can inform inventory planning and marketing strategies to improve overall efficiency and profitability",
-    videoSrc: project2Video,
+      "TThis SQL project features three advanced queries for project management and QA tracking. It calculates missed bug ratios for February 2024 sprints, analyzes project timelines using worklog data, and summarizes sprint completion rates. Together, these queries provide a clear dashboard for monitoring QA performance, project durations, and sprint progress.",
+    videoSrc: project5Video,
+    fileSrc: "/pdf/qa-sprint-insights.pdf",
+    fileExtension: "pdf",
     button: {
       text: "View Full Doc",
-      link:
-        "https://docs.google.com/spreadsheets/d/1vqJ8bpHMRlVNXnqHYJXUQgXGYuA5MZ2ApGwdv2AZ-XI/edit?usp=sharing",
+      link: "",
     },
   },
   {
     id: 3,
-    title: "Data Cleaning and Wrangling in Excel",
+    title: "COVID-19 Data Analysis",
     description:
-      "This Excel file demonstrates techniques for cleaning and organizing raw data to make it analysis-ready. It covers tasks such as removing duplicates, correcting inconsistencies, handling missing entries, and restructuring data into a more usable format. These steps help ensure the data is accurate, consistent, and well-prepared for further analysis or reporting.",
-    videoSrc: project3Video,
+      "This SQL project analyzes COVID-19 data through 10 queries: extracting base metrics, calculating death rates in Pakistan, tracking infection percentages, identifying highest-impacted regions, aggregating continental statistics, monitoring global daily trends, and comparing vaccination progress to population size using CTEs, temp tables, and views. It delivers comprehensive insights on COVID-19's global impact across multiple dimensions.",
+    videoSrc: project5Video,
+    fileSrc: "/pdf/covid19-analysis.pdf",
+    fileExtension: "pdf",
     button: {
       text: "View Full Doc",
-      link:
-        "https://docs.google.com/spreadsheets/d/1TeaQXbQYQ9eA0-cHs75PCSPTn_zcI-WvFF8IVeKJxSg/edit?usp=sharing",
+      link: "",
     },
   },
   {
     id: 4,
-    title: "Branch & SKU-Level Sales, Inventory & Order Insights",
+    title: "Bikers Data Project Performance Dashboard",
     description:
-      " A comprehensive suite of SQL queries delivering insights into branch-wise inventory valuation, monthly GMV, B2C order tracking, item-level stock, POS receivings, and SKU-based transfer orders—enabling informed decision-making across sales, supply chain, and inventory operations",
-    videoSrc: project5Video,
+      "This project delivers a dynamic and interactive dashboard built on SQL-driven insights and Excel data to analyze QA efficiency, project timelines, and sprint progress. It identifies key metrics such as missed bugs, sprint completion rates, and test coverage, enabling data analysts and project managers to monitor quality assurance activities and optimize development workflows across active projects.",
+    videoSrc: project1Video,
+    fileSrc: "/pdf/bikers-data-dashboard.xlsx",
+    fileExtension: "xlsx",
     button: {
       text: "View Full Doc",
-      link:
-        "https://docs.google.com/document/d/1cMs-TJ-tZPKTQ2mVH9THFtXWAzQKId_JOhbG0yqwp-M/edit?usp=sharing",
+      link: "",
     },
   },
   {
     id: 5,
-    title:
-      "QA & Sprint Insights Dashboard – Project Health and Testing Analysis",
+    title: "Coffee Shop Sales Project: Data Analysis & Insights",
     description:
-      "These queries support QA and project analysis by checking test case coverage, project timelines, sprint completion, and missed bugs. They use joined data from issues, projects, sprints, users, and worklogs, with filters for active projects and valid statuses to ensure accurate QA and project performance reporting.",
-    videoSrc: project5Video,
+      "The Coffee Shop Sales analysis reveals that coffee is the top-selling category, followed by tea and drinking chocolate. Peak sales occur from 7 AM to 10 AM, driven by caffeine demand, with Lower Manhattan as the highest-performing location. Seasonal fluctuations indicate opportunities for targeted promotions during slower months. These insights can inform inventory planning and marketing strategies to improve overall efficiency and profitability",
+    videoSrc: project2Video,
+    fileSrc: "/pdf/coffee-shop-analysis.xlsx",
+    fileExtension: "xlsx",
     button: {
       text: "View Full Doc",
-      link:
-        "https://docs.google.com/document/d/1QmJKXbqqEBe7SHg74cmnnkjpWTxAyRCkPoJX5S3d03c/edit?usp=sharing",
+      link: "",
     },
   },
   {
     id: 6,
-    title: "COVID-19 Data Analysis",
+    title: "Data Cleaning and Wrangling in Excel",
     description:
-      "his SQL-based analysis examines COVID-19 trends by tracking cases, deaths, population, and vaccinations. It highlights Pakistan’s death rate, identifies countries with the highest infection and death rates, and compares global daily trends. Vaccination progress is analyzed using a rolling total and population comparison, with results stored in temp tables and views for future use..",
-    videoSrc: project5Video,
+      "This Excel file demonstrates techniques for cleaning and organizing raw data to make it analysis-ready. It covers tasks such as removing duplicates, correcting inconsistencies, handling missing entries, and restructuring data into a more usable format. These steps help ensure the data is accurate, consistent, and well-prepared for further analysis or reporting.",
+    videoSrc: project3Video,
+    fileSrc: "/pdf/data-cleaning-excel.xlsx",
+    fileExtension: "xlsx",
     button: {
       text: "View Full Doc",
-      link:
-        "https://drive.google.com/file/d/1jTy9o5CWtb5SH-nFO1fqWfprHrPhatDh/view?usp=sharing",
+      link: "",
     },
   },
+
   {
     id: 7,
-    title: "🏨 Atiq Hospitality: Interactive Business Intelligence Dashboard ",
+    title: "🏨 Atiq Hospitality: Interactive Business Intelligence Dashboard",
     description:
-      "This interactive dashboard offers a comprehensive overview of Atiq Hospitality's key performance metrics. Visualizations track revenue by city and property, booking patterns by platform and room class, occupancy rates, and average daily rates (ADR). Detailed breakdowns and filtering options allow for in-depth analysis and strategic decision-making.",
+      "This healthcare dashboard offers a comprehensive view of hospital performance metrics. At the top, it displays key indicators such as Total Patients, Admissions, Discharges, Emergency Visits, and Average Length of Stay. " +
+      "A time-based trend graph illustrates patient flow across days or months, enabling staff to monitor hospital occupancy. Filters allow segmentation by department (e.g., ICU, ER, General Ward), age group, gender, or disease category. " +
+      "An interactive section breaks down data by hospital branches, enabling comparative analysis. The dashboard also presents readmission rates, bed utilization, and mortality or recovery percentages, depending on the facility's scope. " +
+      "Drill-downs and hover features reveal granular details for individual patients, departments, or diagnoses.",
+    fullDescription:
+      "🔍 How This Dashboard Helps the Company: \n" +
+      "1.\tResource Allocation & Staffing: \n" +
+      "Monitoring patient volume and bed occupancy helps optimize doctor and nurse deployment in high-demand areas like ICU or Emergency. \n\n" +
+      "2.\tQuality of Care Improvement: \n" +
+      "Readmission and mortality rates highlight areas needing clinical review, ensuring better patient outcomes and accountability. \n\n" +
+      "3.\tOperational Efficiency: \n" +
+      "Average Length of Stay (ALOS) and discharge trends help in reducing patient backlogs and improving patient throughput. \n\n" +
+      "4.\tDepartmental Insights: \n" +
+      "Department-wise filtering enables leadership to evaluate which units are overburdened or underperforming. \n\n" +
+      "5.\tEmergency Response Planning: \n" +
+      "Emergency visit trends support better preparedness for high-traffic periods, aiding in triage planning and resource mobilization. \n\n" +
+      "6.\tBranch Performance Comparison: \n" +
+      "Comparing multiple hospital branches reveals which locations are meeting KPIs and which require administrative attention. \n\n" +
+      "7.\tPatient Demographics Analysis: \n" +
+      "Understanding trends across age groups and gender helps tailor services, facilities, and targeted awareness campaigns. \n\n" +
+      "8.\tData-Driven Decision-Making: \n" +
+      "With real-time and historical insights, hospital management can make informed decisions on budgeting, expansions, or policy updates.",
     videoSrc: project7video,
+    fileSrc: "/pdf/hospital-dashboard.pbix",
+    fileExtension: "pbix",
+    summaryPdf: "/pdf/atiq-hospitality-summary.pdf",
     button: {
       text: "View Full Doc",
       link:
-        "https://drive.google.com/file/d/1wXfX9wNDu2UWQ7OE8cX3CWqcwyCpl8x2/view?usp=sharing",
+        "https://github.com/rohailrao/Dashboards/blob/bbe1319c3aab2d65dbc4aa3067e56b6268701fbf/Hospitality%20Domain%20project.pbix",
     },
   },
   {
     id: 8,
     title: "📊 Maven Market: Interactive Analytics Dashboard",
     description:
-      "An all-in-one Power BI report delivering a comprehensive view of Maven Market's business performance. It features revenue and order trends, interactive product-level insights with drill-through analysis, and customer segmentation by demographics and geography—empowering data-driven decision-making through engaging visualizations and intuitive interactions.",
+      "This interactive dashboard provides a comprehensive overview of product-wise performance. On the left, it shows detailed data including transactions, profit, margins, and return rates per product. The top-right displays this month's overall performance — transactions, total profit, and return count. Below that, it compares current performance with monthly targets, highlighting both progress and percentage gaps. " +
+      "Users can filter results by country, drilling down further into states and even cities for granular insights. The weekly revenue trend for recent months, along with this month's revenue target, is displayed at the bottom left. Hovering over charts reveals exact values. You can also view product-specific performance by selecting a product within a chosen region. " +
+      "For quick access, key performance highlights are listed with clickable links that auto-apply filters, saving time and simplifying navigation.",
+    fullDescription:
+      "🔍 How This Dashboard Helps the Company: \n" +
+      "1.\tProduct Performance Analysis: \n" +
+      "Har product ke transactions, profit, margin aur return percentage ko dekh kar identify kiya ja sakta hai kaunsa product high-performing hai aur kaunsa underperform kar raha hai — isse product strategy ko adjust kiya ja sakta hai. \n\n" +
+      "2.\tGoal Tracking: \n" +
+      "Monthly goals ke comparison se yeh pata chalta hai ke company target se kitna aage ya peeche hai. Agar goal meet nahi ho raha to timely corrective actions liye ja sakte hain. \n\n" +
+      "3.\tGeographic Insights (Country → State → City): \n" +
+      "Regional performance ko track karne se identify hota hai ke kaunsi market strong hai aur kaunsi market mein improvement ki zarurat hai. Localized marketing ya sales strategy banayi ja sakti hai. \n\n" +
+      "4.\tProduct + Location Combination Insights: \n" +
+      "Kisi specific product ki performance kisi specific country ya city mein dekh kar targeted campaigns run ki ja sakti hain ya inventory planning ki ja sakti hai. \n\n" +
+      "5.\tReturn Analysis: \n" +
+      "High return percentage wale products identify karke unki quality improve ki ja sakti hai ya un products ko reconsider kiya ja sakta hai. \n\n" +
+      "6.\tTrend Monitoring: \n" +
+      "Weekly revenue trend se seasonal ya month-wise behavior samajh aata hai jo budgeting aur forecasting mein kaam aata hai. \n\n" +
+      "7.\tTime Saving Through Smart Filters: \n" +
+      "Dashboard ke smart links aur auto-filter options se teams quickly data access kar sakti hain without manually filtering again and again — boosting efficiency. \n\n" +
+      "8.\tExecutive-Level Reporting: \n" +
+      "Summary notes aur drill-down features ki wajah se ye dashboard senior management ke liye bhi useful hai jo jaldi mein sirf high-level highlights dekhna chahte hain.",
     videoSrc: project8video,
+    fileSrc: "/pdf/MavenMarket_Report.pbix",
+    fileExtension: "pbix",
+    summaryPdf: "/pdf/maven-market-summary.pdf",
     button: {
       text: "View Full Doc",
       link:
-        "https://drive.google.com/file/d/1XX4u2YU6Ftglm5Pimqn3GvnvERnuuUZS/view?usp=sharing",
+        "https://github.com/rohailrao/Dashboards/blob/bbe1319c3aab2d65dbc4aa3067e56b6268701fbf/MavenMarket_Report.pbix",
     },
   },
   {
     id: 9,
     title: "📈 Adventure Works: Interactive Business Intelligence Report",
     description:
-      "A dynamic Power BI report analyzing a bike shop’s performance through revenue trends, order metrics, product-level insights, and return rates. Users can interactively explore top products, drill into detailed views, filter data by country via a world map, and uncover customer patterns by income, occupation, and order behavior—all in one cohesive dashboard experience",
+      "This interactive report presents a complete view of the bike shop's performance. Key metrics such as total revenue, profit, order volume, and return ratio are displayed prominently at the top. It shows month-wise revenue trends and details like monthly order and return counts. Orders are categorized into three segments, while the top 10 products by order volume are highlighted. " +
+      "Users can explore deeper by hovering over product categories for detailed data or clicking on a product to update the entire report to show its specific performance. A drill-through feature provides a dedicated product page with in-depth analytics on orders, revenue, and return rates. " +
+      "A country selection tab with a world map visualization allows regional analysis. Additionally, a customer-focused section provides data on unique customers, average revenue per customer, and order distribution by income level and occupation. The top 100 customers by both order count and revenue are also showcased for quick reference.",
+    fullDescription:
+      "🔍 How This Dashboard Helps the Company: \n" +
+      "1.\tProduct-Level Insights: \n" +
+      "Identify top-selling products and those with high return rates, helping in product optimization and inventory planning. \n\n" +
+      "2.\tCustomer Segmentation: \n" +
+      "Analyze customer behavior based on occupation and income, allowing for better-targeted marketing and personalized engagement strategies. \n\n" +
+      "3.\tRevenue & Trend Analysis: \n" +
+      "Track revenue and order trends month by month to spot growth periods or slowdowns — aiding strategic planning and forecasting. \n\n" +
+      "4.\tTop Customer Identification: \n" +
+      "Focus efforts on retaining high-value customers (top 100 by revenue/order count), which can significantly impact profitability. \n\n" +
+      "5.\tGeographic Performance Evaluation: \n" +
+      "The country selection tab enables businesses to tailor strategies for specific markets based on regional performance. \n\n" +
+      "6.\tInteractive Exploration: \n" +
+      "With hover, click, and drill-through features, users can explore performance deeply without needing multiple reports — increasing usability and saving time. \n\n" +
+      "7.\tReturn Rate Control: \n" +
+      "Identifying products with high returns helps refine product quality, customer communication, or return policies. \n\n" +
+      "8.\tStrategic Decision-Making: \n" +
+      "Real-time, visual insights make it easier for management to make data-driven decisions, boost efficiency, and improve customer satisfaction.",
     videoSrc: project9video,
+    fileSrc: "/pdf/Adventureworksreports.pbix",
+    fileExtension: "pbix",
+    summaryPdf: "/pdf/adventure-works-summary.pdf",
     button: {
       text: "View Full Doc",
       link:
-        "https://drive.google.com/file/d/1RwxfkDYaPbRMmE48zE6qIv68b-YR46eG/view?usp=sharing",
+        "https://github.com/rohailrao/Dashboards/blob/bbe1319c3aab2d65dbc4aa3067e56b6268701fbf/Adventureworks%20reports.pbix",
+    },
+  },
+  {
+    id: 10,
+    title: "Case Study: Data-Driven Business Insights",
+    description:
+      "In this case study, we dive into a data-driven approach to uncover business insights across multiple industries...",
+    videoSrc: project10video,
+    fileSrc: "/pdf/DealCart.pptx",
+    fileExtension: "pptx",
+    button: {
+      text: "Read Full Case Study",
+      link: "",
+      download: true,
     },
   },
 ];
 
 class Projects extends Component {
+  constructor(props) {
+    super(props);
+
+    // Initialize state to track which descriptions are expanded
+    this.state = {
+      expandedDescriptions: {},
+    };
+  }
+
+  toggleDescription = (projectId) => {
+    this.setState((prevState) => ({
+      expandedDescriptions: {
+        ...prevState.expandedDescriptions,
+        [projectId]: !prevState.expandedDescriptions[projectId],
+      },
+    }));
+  };
+
+  handleVideoClick = (project) => {
+    const url = `/video-player?id=${project.id}&title=${encodeURIComponent(
+      project.title
+    )}&description=${encodeURIComponent(
+      project.description
+    )}&videoSrc=${encodeURIComponent(
+      project.videoSrc
+    )}&fileSrc=${encodeURIComponent(project.fileSrc || "")}`;
+    window.open(url, "_blank");
+  };
+
+  // Helper function to get the filename from the project
+  getFileName = (project) => {
+    // Extract base filename without path
+    const baseFileName = project.fileSrc.split("/").pop();
+    // Return the filename with the correct extension
+    return project.title.split(":")[0].trim() + "." + project.fileExtension;
+  };
+
   render() {
     const { theme } = this.props;
+    const { expandedDescriptions } = this.state;
 
     return (
       <div className="projects-main">
@@ -159,17 +289,15 @@ class Projects extends Component {
           </Fade>
         </div>
 
-        {/* Project Cards Section */}
         <div className="projects-container">
           {projectsData.map((project, index) => (
             <React.Fragment key={project.id}>
-              {(index === 0 || index === 3 || index === 6) && (
+              {(index === 0 || index === 3 || index === 6 || index === 9) && (
                 <div className="project-heading-wrapper">
                   <h2
                     className="project-section-heading"
                     style={{ color: theme.text }}
                   >
-                    {/* Conditionally render icons */}
                     {index === 0 && (
                       <>
                         <img
@@ -179,7 +307,7 @@ class Projects extends Component {
                           height="30"
                           style={{ marginRight: "10px", marginTop: "5px" }}
                         />
-                        Excel-Based Projects
+                        SQL-Based Projects
                       </>
                     )}
                     {index === 3 && (
@@ -191,7 +319,7 @@ class Projects extends Component {
                           height="30"
                           style={{ marginRight: "10px" }}
                         />
-                        SQL-Based Projects
+                        Excel-Based Projects
                       </>
                     )}
                     {index === 6 && (
@@ -206,6 +334,18 @@ class Projects extends Component {
                         Power BI Projects
                       </>
                     )}
+                    {index === 9 && (
+                      <>
+                        <img
+                          src="https://img.icons8.com/fluency/48/document.png"
+                          alt="Case Study Icon"
+                          width="30"
+                          height="30"
+                          style={{ marginRight: "10px" }}
+                        />
+                        Case Studies
+                      </>
+                    )}
                   </h2>
                 </div>
               )}
@@ -214,26 +354,99 @@ class Projects extends Component {
                 className="project-card"
                 style={{ backgroundColor: theme.cardColor }}
               >
-                <video className="project-video" muted loop autoPlay>
+                <video
+                  className="project-video"
+                  muted
+                  loop
+                  autoPlay
+                  controls
+                  onClick={() => this.handleVideoClick(project)}
+                  style={{ cursor: "pointer" }}
+                >
                   <source src={project.videoSrc} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <div className="project-info">
                   <h3 style={{ color: theme.text }}>{project.title}</h3>
-                  <p style={{ color: theme.secondaryText }}>
-                    {project.description}
-                  </p>
-                  {project.button && (
-                    <a
-                      href={project.button.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-button"
-                      style={{ color: theme.text }}
-                    >
-                      {project.button.text}
-                    </a>
-                  )}
+
+                  {/* Description with conditional rendering based on expanded state */}
+                  <div className="project-description">
+                    {project.fullDescription &&
+                    expandedDescriptions[project.id] ? (
+                      project.fullDescription
+                        .split("\n\n")
+                        .map((paragraph, i) => (
+                          <p
+                            key={i}
+                            style={{
+                              color: theme.secondaryText,
+                              marginBottom:
+                                i <
+                                project.fullDescription.split("\n\n").length - 1
+                                  ? "15px"
+                                  : "0",
+                            }}
+                          >
+                            {paragraph}
+                          </p>
+                        ))
+                    ) : (
+                      <p style={{ color: theme.secondaryText }}>
+                        {project.description}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="project-buttons">
+                    {/* For Power BI projects (index 6-8), show PBIX download and See More buttons */}
+                    {index >= 6 && index <= 8 ? (
+                      <>
+                        <a
+                          href={project.fileSrc}
+                          download={this.getFileName(project)}
+                          className="project-button"
+                          style={{ color: theme.text }}
+                        >
+                          Download PBIX
+                        </a>
+                        {project.fullDescription && (
+                          <button
+                            onClick={() => this.toggleDescription(project.id)}
+                            className="project-button"
+                            style={{
+                              color: theme.text,
+                              marginLeft: "10px",
+                              background: "none",
+                              border: "none",
+                              cursor: "pointer",
+                              fontSize: "inherit",
+                              fontFamily: "inherit",
+                            }}
+                          >
+                            {expandedDescriptions[project.id]
+                              ? "See Less"
+                              : "See More"}
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      /* For all other projects, maintain single button behavior */
+                      <a
+                        href={project.button.link || project.fileSrc}
+                        download={
+                          !project.button.link || project.button.download
+                            ? this.getFileName(project)
+                            : null
+                        }
+                        target={project.button.link ? "_blank" : "_self"}
+                        rel={project.button.link ? "noopener noreferrer" : ""}
+                        className="project-button"
+                        style={{ color: theme.text }}
+                      >
+                        {project.button.text}
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </React.Fragment>
@@ -245,9 +458,7 @@ class Projects extends Component {
           className="project-button"
           newTab={true}
           theme={theme}
-          href={
-            "https://drive.google.com/drive/folders/10iwkvAzq1T9qLW2gZfISJznK5eAadqvm?usp=drive_link"
-          }
+          href="https://github.com/rohailrao?tab=repositories"
         />
         <TopButton theme={theme} />
       </div>

@@ -10,56 +10,69 @@ import {
 } from "../../portfolio.js";
 
 function SeoHeader() {
-  let sameAs = [];
-  socialMediaLinks
+  // Extract social media links excluding mail and tel
+  const sameAs = socialMediaLinks
     .filter(
       (media) =>
         !(media.link.startsWith("tel") || media.link.startsWith("mailto"))
     )
-    .forEach((media) => {
-      sameAs.push(media.link);
-    });
+    .map((media) => media.link);
 
-  let mail = socialMediaLinks
-    .find((media) => media.link.startsWith("mailto"))
-    .link.substring("mailto:".length);
-  let job = experience.sections
-    ?.find((section) => section.work)
-    ?.experiences?.at(0);
+  // Safe extraction of email from either 'mailto:' or Gmail URL
+  let mail = "";
+  const mailMedia = socialMediaLinks.find((media) =>
+    media.link.startsWith("mailto:")
+  );
+  if (mailMedia) {
+    mail = mailMedia.link.substring("mailto:".length);
+  } else {
+    const gmailMedia = socialMediaLinks.find((media) =>
+      media.link.includes("mail.google.com")
+    );
+    if (gmailMedia) {
+      const params = new URLSearchParams(gmailMedia.link.split("?")[1] || "");
+      mail = params.get("to") || "";
+    }
+  }
 
-  let credentials = [];
-  certifications.certifications.forEach((certification) => {
-    credentials.push({
-      "@context": "https://schema.org",
-      "@type": "EducationalOccupationalCredential",
-      url: certification.certificate_link,
-      name: certification.title,
-      description: certification.subtitle,
-    });
-  });
+  // Extract first work experience safely
+  const job = experience.sections?.find((section) => section.work)
+    ?.experiences?.[0];
+
+  // Prepare structured data for certifications
+  const credentials = certifications.certifications.map((cert) => ({
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalCredential",
+    url: cert.certificate_link,
+    name: cert.title,
+    description: cert.subtitle,
+  }));
+
+  // Construct the schema.org JSON-LD
   const data = {
     "@context": "https://schema.org/",
     "@type": "Person",
     name: greeting.title,
     url: seo?.og?.url,
-    email: mail,
-    telephone: contactPageData.phoneSection?.subtitle,
+    email: mail || undefined,
+    telephone: contactPageData.phoneSection?.subtitle || undefined,
     sameAs: sameAs,
-    jobTitle: job.title,
+    jobTitle: job?.title || "Data Analyst",
     worksFor: {
       "@type": "Organization",
-      name: job.company,
+      name: job?.company || "Freelance",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: contactPageData.addressSection?.locality,
-      addressRegion: contactPageData.addressSection?.region,
-      addressCountry: contactPageData.addressSection?.country,
-      postalCode: contactPageData.addressSection?.postalCode,
-      streetAddress: contactPageData.addressSection?.streetAddress,
+      addressLocality: contactPageData.addressSection?.locality || "",
+      addressRegion: contactPageData.addressSection?.region || "",
+      addressCountry: contactPageData.addressSection?.country || "",
+      postalCode: contactPageData.addressSection?.postalCode || "",
+      streetAddress: contactPageData.addressSection?.streetAddress || "",
     },
     hasCredential: credentials,
   };
+
   return (
     <Helmet>
       <title>{seo.title}</title>

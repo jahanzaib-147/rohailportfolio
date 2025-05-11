@@ -63,9 +63,10 @@ const socialMediaLinks = [
   // },
   {
     name: "Gmail",
-    link: "mailto:rohailrao2000@gmail.com",
-    fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
+    link:
+      "https://mail.google.com/mail/?view=cm&fs=1&to=rohailrao2000@gmail.com",
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
   },
   // {
   //   name: "X-Twitter",
@@ -523,7 +524,7 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "Remote Data Analyst",
+          title: "Senior Data Analyst",
           company: "Simplified Dashboards",
           company_url:
             "https://www.linkedin.com/company/simplified-dashboards/?viewAsMember=true",
@@ -716,7 +717,7 @@ const publications = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "cropped_image.png",
+    profile_image_path: "my_pic.png",
     description:
       "📬 I'm available on most social media platforms — feel free to connect! I typically respond within 24 hours. I'm happy to collaborate or assist with anything related to Data Analysis, SQL, Power BI, Excel Reporting, Dashboard Development, and Data-Driven Decision Making",
   },

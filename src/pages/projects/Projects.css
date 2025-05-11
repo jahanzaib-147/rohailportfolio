@@ -170,3 +170,92 @@
   margin: 0;
   padding: 0;
 }
+/* Add these new styles to your existing Projects.css file */
+
+.project-video {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.view-video-btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-video-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .view-video-btn,
+  .project-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Add these styles to your Projects.css file */
+
+.project-description {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.project-description p {
+  margin: 0;
+  white-space: pre-line; /* Respects line breaks in the text */
+}
+
+.project-button {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.project-button {
+  border: 1px solid currentColor !important;
+  background: transparent;
+}
+
+button.project-button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Improved styling for list items in expanded description */
+.project-description ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.project-description li {
+  margin-bottom: 5px;
+}
