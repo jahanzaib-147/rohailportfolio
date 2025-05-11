@@ -144,21 +144,22 @@ const projectsData = [
     fullDescription:
       "🔍 How This Dashboard Helps the Company: \n" +
       "1.\tProduct Performance Analysis: \n" +
-      "Har product ke transactions, profit, margin aur return percentage ko dekh kar identify kiya ja sakta hai kaunsa product high-performing hai aur kaunsa underperform kar raha hai — isse product strategy ko adjust kiya ja sakta hai. \n\n" +
+      "By viewing each product's transactions, profit, margin, and return percentage, high-performing and underperforming products can be identified — helping adjust product strategies. \n\n" +
       "2.\tGoal Tracking: \n" +
-      "Monthly goals ke comparison se yeh pata chalta hai ke company target se kitna aage ya peeche hai. Agar goal meet nahi ho raha to timely corrective actions liye ja sakte hain. \n\n" +
+      "Monthly goal comparisons show how far ahead or behind the company is. If targets aren't met, timely corrective actions can be taken. \n\n" +
       "3.\tGeographic Insights (Country → State → City): \n" +
-      "Regional performance ko track karne se identify hota hai ke kaunsi market strong hai aur kaunsi market mein improvement ki zarurat hai. Localized marketing ya sales strategy banayi ja sakti hai. \n\n" +
+      "Tracking regional performance helps identify strong and weak markets, enabling localized marketing or sales strategies. \n\n" +
       "4.\tProduct + Location Combination Insights: \n" +
-      "Kisi specific product ki performance kisi specific country ya city mein dekh kar targeted campaigns run ki ja sakti hain ya inventory planning ki ja sakti hai. \n\n" +
+      "Analyzing specific product performance by country or city supports targeted campaigns and inventory planning. \n\n" +
       "5.\tReturn Analysis: \n" +
-      "High return percentage wale products identify karke unki quality improve ki ja sakti hai ya un products ko reconsider kiya ja sakta hai. \n\n" +
+      "Products with high return percentages can be improved in quality or reconsidered entirely. \n\n" +
       "6.\tTrend Monitoring: \n" +
-      "Weekly revenue trend se seasonal ya month-wise behavior samajh aata hai jo budgeting aur forecasting mein kaam aata hai. \n\n" +
+      "Weekly revenue trends help understand seasonal or month-wise behaviors for better budgeting and forecasting. \n\n" +
       "7.\tTime Saving Through Smart Filters: \n" +
-      "Dashboard ke smart links aur auto-filter options se teams quickly data access kar sakti hain without manually filtering again and again — boosting efficiency. \n\n" +
+      "Smart links and auto-filter options let teams quickly access data without repeated filtering — boosting efficiency. \n\n" +
       "8.\tExecutive-Level Reporting: \n" +
-      "Summary notes aur drill-down features ki wajah se ye dashboard senior management ke liye bhi useful hai jo jaldi mein sirf high-level highlights dekhna chahte hain.",
+      "Summary notes and drill-downs make this dashboard useful for senior management looking for quick high-level insights.",
+
     videoSrc: project8video,
     fileSrc: "/pdf/MavenMarket_Report.pbix",
     fileExtension: "pbix",
@@ -252,8 +253,6 @@ class Projects extends Component {
 
   // Helper function to get the filename from the project
   getFileName = (project) => {
-    // Extract base filename without path
-    const baseFileName = project.fileSrc.split("/").pop();
     // Return the filename with the correct extension
     return project.title.split(":")[0].trim() + "." + project.fileExtension;
   };
