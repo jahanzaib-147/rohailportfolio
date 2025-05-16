@@ -538,7 +538,8 @@ const experience = {
         {
           title: "Assistant Manager Quality Auditor",
           company: "Ibex Global (Covered Insurance)",
-          company_url: "https://www.tiktok.com/en/",
+          company_url:
+            "https://www.linkedin.com/company/coveredinsurance/posts/?feedView=all",
           logo_path: "coverd.jpg",
           duration: "August 2024 - Present",
           location: "Karachi, Pakistan",
@@ -549,7 +550,7 @@ const experience = {
         {
           title: "Performance Analyst ",
           company: "Tekrevol ",
-          company_url: "https://legatohealthtech.com/",
+          company_url: "https://www.linkedin.com/company/tekrevol/",
           logo_path: "tekrevol.jpg",
           duration: "September 2023 – June 2024",
           location: "Karachi, Pakistan",
@@ -560,8 +561,8 @@ const experience = {
         {
           title: "Commercial Analyst",
           company: "MEDZnMORE Pvt. Ltd ",
-          company_url: "https://www.linkedin.com/company/muffito-inc/about/",
-          logo_path: "medznmore.webp",
+          company_url: "https://www.linkedin.com/company/medznmore/",
+          logo_path: "medznmore_logo.jpeg",
           duration: "January 2023 - July 2023",
           location: "Karachi, Pakistan",
           description:
@@ -677,7 +678,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "I have worked on end-to-end Data Analytics projects that involve data extraction using SQL, performing detailed calculations and cleaning in Excel, creating interactive dashboards in Power BI, and compiling complete case studies for business stakeholders. These case studies showcase the identification of key business issues through data analysis and the presentation of actionable insights and solutions based on evidence. My projects reflect strong hands-on experience with modern data tools and a deep understanding of how to turn raw data into valuable business decisions.",
   avatar_image_path: "projects_image.svg",
 };
 
